@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div>
+        <div>
+            <p>Want to know my Name</p>
+            <p id="showMyName"></p>
+            <br>
+            <button id="btn">Click Here</button>
+        </div>
+    </div> -->
+
+    <!-- <div>
+        <p>Click Try it wait 3 seconds </p>
+        <p>click stop to prevent the 1st function</p>
+        <p>(you must stop before 2 seconds are up ....)</p>
+        <button onclick="myvar=setTimeout(myFunction,2000)">Try It</button>
+        <button onclick="clearTimeout(myvar)">stop it</button>
+    </div> -->
+    <div>
+        <p id="num">Click try it wait for 5 seconds</p>
+        <button id="btn">click here</button>
+        <button id="btn2">stop here</button>
+    </div>
+
+    <script>
+        // const showMyName=document.querySelector('#showMyName');
+        // const btn=document.querySelector('#btn');
+        // const showMyName1=()=>{
+        //     setTimeout(()=>{
+        //         showMyName.innerHTML="anusha"
+        //     },1000)
+
+        // }
+        // btn.addEventListener('click',showMyName1)
+
+        // function myFunction() {
+        //     alert("hello")
+            
+        // }
+// const stopNum=document.querySelector('#num');
+//         const btn=document.querySelector('#btn');
+//         const btn2=document.querySelector('#btn2')
+//       let  num=0;
+//          const showMyNum=()=>{
+//             stopNum.innerHTML='loading..........'
+//             setInterval(() => {
+//                 stopNum.innerHTML=`${num}`;
+//                 num++;
+//             }, 1000);
+//          }
+//          btn.addEventListener('click',showMyNum)
+
+const stopNum=document.querySelector('#num');
+        const btn=document.querySelector('#btn');
+        const btn2=document.querySelector('#btn2')
+      let  num=0;
+      let timeref;
+         const showMyNum=()=>{
+            stopNum.innerHTML='loading..........'
+            timeref=setInterval(() => {
+                stopNum.innerHTML=`${num}`;
+                num++;
+            }, 1000);
+         }
+         btn.addEventListener('click',showMyNum);
+         btn2.addEventListener('click',()=>{
+            clearInterval(timeref);
+         })
+         
+    </script>
+    
+</body>
+</html>

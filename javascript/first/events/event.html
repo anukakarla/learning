@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" onclick="alert('1st way of writing events')">
+    <span>simple inline</span></a>
+    <button onclick="anu()">click here</button>
+    <div>
+    <a href="#">
+<span id="third">inline Event</span>
+    </a></div>
+     <div>
+    <a href="#">
+<span id="fourth">addlisterns event</span>
+    </a></div>
+    
+
+
+
+    <script>
+        anu=()=>{
+            alert("by calling function")
+        }
+        const thirdWay=document.getElementById('third');
+        thirdWay.onclick=function(){
+            alert("third way linline events")
+        }
+        thirdWay.onclick=function(){
+            console.log("3rd way");        } //last bottom will excute events when we click on it if we use same element
+
+        const fourth=document.querySelector('#fourth');
+        fourth.addEventListener("click",()=>{
+            // open("https://www.youtube.com/watch?v=KGkiIBTq0y0&t=33895s","_blank")
+            alert("4th way of addlisterns event")
+        })
+         fourth.addEventListener("click",()=>{
+            console.log("hey"); //4th way will excute all the listerns even if we use same const i.e., fourth
+        })
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+console.log("anusha please start javascript finish neatly u have to learn clearly as well as u have to confident on that");

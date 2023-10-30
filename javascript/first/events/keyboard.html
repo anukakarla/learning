@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+    <p >KeyBoard Events</p>
+    <div>
+        <input type="text" onkeydown="Down()" onkeypress="press()" onkeyup="up()">
+        <p id="key"></p>
+    </div>
+    </div>
+    <script>
+        press=()=>{
+            document.getElementById('key').innerHTML=`you press ${event.key} and its code is ${event.code}:`;
+        }
+        Down=()=>{
+            document.getElementById('key').innerHTML="Key Down"
+        }
+         up=()=>{
+            document.getElementById('key').innerHTML="Key Up"
+        }
+    </script>
+    
+</body>
+</html>

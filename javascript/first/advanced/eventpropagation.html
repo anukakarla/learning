@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event propagation</title>
+</head>
+<body>
+    <div id="btnParent" class="parent">
+        <div id="btnChild" class="child"></div>
+    </div>
+    <!-- <div class="main">
+        <div id="parentClass">
+            <button id="btnParent">Parent</button>
+        </div>
+        <div id="childClass">
+        <button id="btnChild">Child</button>
+        </div>
+    </div> -->
+</body>
+<script>
+    const parent=document.querySelector('#btnParent');
+    const child=document.querySelector('#btnChild');
+
+    parentClass=()=>{
+        alert("parent div")
+    }
+
+    childClass=()=>{
+        alert("child div");
+        // event.stopPropagation(); //it will stop the parent div
+    }
+    // child.addEventListener('click',childClass,false);
+    // parent.addEventListener('click',parentClass,false);//bubble phase (default)
+    child.addEventListener('click',childClass,true);
+    parent.addEventListener('click',parentClass,true);//capture Phase or trickling phase
+</script>
+</html>
+
+//bubble phase:bottom to top
+//(elements->body->html->document->window);
+//capture or trickling phase :top to bottom
+//window->document->html->body->elements

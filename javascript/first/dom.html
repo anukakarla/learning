@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM</h1>
+<h4 id="heading">change the content</h4>
+    <button  onclick="clickhere()">click here</button>
+    <script>
+const clickhere=()=>{
+    // document.getElementById("heading").innerHTML="change the text"
+    document.querySelector("#heading").innerHTML="anusha"
+    console.log(document.querySelectorAll("#heading"));// it will show how many id/class names present and returns length
+}
+    </script>
+</body>
+</html>

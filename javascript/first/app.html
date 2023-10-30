@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="styleSheet" href="./app.css">
+</head>
+<body>
+    <h1 class="anu">JavaScript Pratice</h1>
+    <button onclick="myFunction()">click Here</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction() {
+            let d=new Date();
+            d.setTime(6);
+            document.getElementById("demo").innerHTML=d;
+
+
+            
+        }
+        (function(){
+    setInterval(()=>{
+        var d=new Date().toLocaleTimeString();
+        // console.log(new Date().toLocaleTimeString());
+        document.getElementById("demo").innerHTML=d;
+
+    },1000)
+})();
+    </script>
+    <script src="./app.js" ></script>
+
+</body>
+</html>

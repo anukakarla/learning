@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p id="mouse" onmousedown="onMouseDown()" onmouseup="onMouseUp()">
+    Avul Pakir Jainulabdeen Abdul Kalam BR was an Indian aerospace scientist and statesman
+     who served as the 11th president of India from 2002 to 2007.
+     He was born and raised in Rameswaram, Tamil Nadu and studied physics and aerospace engineering. </p>
+</div>
+<div>
+    <h5 id="leave">vul Pakir Jainulabdeen Abdul Kalam BR</h5>
+</div>
+</body>
+<script>
+    function onMouseDown() {
+        console.log("onMouse Up");
+        document.getElementById('mouse').style.color="white"
+        
+    }
+     function onMouseUp() {
+        document.getElementById('mouse').style.color="red"
+        console.log("onMouse down");
+        
+    }
+
+    const menter=document.querySelector("#leave")
+    menter.addEventListener('mouseenter',()=>{
+        menter.style.backgroundColor="red";
+        console.log("enter");
+    })
+     menter.addEventListener('mouseleave',()=>{
+        menter.style.backgroundColor="pink";
+        console.log("leave");
+    })
+
+</script>
+</html>
